@@ -49,19 +49,19 @@ const App = () => {
   return (
     <div>
         {/* Do not remove the main div */}
-        <ul>
-        { showItems>0 && 
-            displayItems.map((item,index)=>
-              <li key={index}>{item}</li>
-            )
-
-        }
         {
-          showItems < items.length && 
-          <button onClick={loadMore}>Load More</button>
+          <ul>
+            {showItems>0 && 
+                displayItems.map((item,index)=>
+                  <li key={index+1}>{item}</li>
+                )
+            }
+            {
+              showItems < items.length && 
+              <button onClick={loadMore}>Load More</button>
+            }
+          </ul>
         }
-        </ul>
-
     </div>
   )
 }
