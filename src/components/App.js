@@ -46,7 +46,7 @@ const App = () => {
     setShowItems(prevValue => prevValue + itemPerPage)
   }
 
-  console.log(showItems)
+      console.log(showItems)
 
 
   return (
