@@ -38,12 +38,12 @@ const items = [
 const App = () => {
 
   const itemPerPage = 10
-  const [showItems, setShowItems] = useState(itemPerPage)
+  const [showItems, setShowItems] = useState(0)
 
   const displayItems = items.slice(0,showItems)
 
   function loadMore(){
-    setShowItems(prevValue => prevValue + 10)
+    setShowItems(prevValue => prevValue + itemPerPage)
   }
 
   return (
