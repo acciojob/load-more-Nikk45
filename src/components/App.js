@@ -50,17 +50,17 @@ const App = () => {
     <div>
         {/* Do not remove the main div */}
         {
-          <ul>
-            {showItems>0 && 
+          showItems>0 &&<ul>
+            { 
                 displayItems.map((item,index)=>
                   <li key={index+1}>{item}</li>
                 )
             }
-            {
-              showItems < items.length && 
-              <button onClick={loadMore}>Load More</button>
-            }
           </ul>
+        }
+        {
+          showItems < items.length && 
+          <button onClick={loadMore}>Load More</button>
         }
     </div>
   )
