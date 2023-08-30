@@ -54,13 +54,13 @@ const App = () => {
             displayItems.map((item,index)=>
               <li key={index}>{item}</li>
             )
-        }
-        </ul>
 
+        }
         {
           showItems < items.length && 
           <button onClick={loadMore}>Load More</button>
         }
+        </ul>
 
     </div>
   )
