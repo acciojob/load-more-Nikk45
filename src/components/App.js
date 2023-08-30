@@ -1,5 +1,5 @@
 
-import React from "react";
+import React, { useState } from "react";
 import './../styles/App.css';
 
 const items = [
@@ -36,9 +36,30 @@ const items = [
 ];
 
 const App = () => {
+
+  const itemPerPage = 10
+  const [showItems, setShowItems] = useState(itemPerPage)
+
+  const displayItems = items.slice(0,showItems)
+
+  function loadMore(){
+    setShowItems(prevValue => prevValue + 10)
+  }
+
   return (
     <div>
         {/* Do not remove the main div */}
+        {
+            displayItems.map((item,index)=>
+              <li key={index}>{item}</li>
+            )
+        }
+
+        {
+          showItems < items.length && 
+          <button onClick={loadMore}>Load More</button>
+        }
+
     </div>
   )
 }
