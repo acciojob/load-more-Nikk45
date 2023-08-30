@@ -45,10 +45,6 @@ const App = () => {
   function loadMore(){
     setShowItems(prevValue => prevValue + itemPerPage)
   }
-  if(showItems>=30){
-    setShowItems(0)
-    console.log(showItems);
-  }
 
   console.log(showItems)
 
