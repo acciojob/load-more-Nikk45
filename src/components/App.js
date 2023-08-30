@@ -50,8 +50,8 @@ const App = () => {
     <div>
         {/* Do not remove the main div */}
         {
-          showItems>0 &&<ul>
-            { 
+          <ul>
+            { showItems>0 &&
                 displayItems.map((item,index)=>
                   <li key={index+1}>{item}</li>
                 )
